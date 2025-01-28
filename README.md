@@ -51,7 +51,7 @@ You may also see any lint errors in the console.
 
 not much difficulties faced
 
-## Improvements you would make if given more time
+## Improvements can make if given more time
 
 can implement Search based on username/email,\
  alert/toast messages,\
