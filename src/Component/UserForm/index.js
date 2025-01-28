@@ -5,6 +5,12 @@ import "./index.css";
 class UserForm extends Component {
   state = { name: "", email: "", website: "" };
 
+  componentDidMount() {
+    const { data } = this.props;
+    const { name, email, website } = data;
+    this.setState({ name, email, website });
+  }
+
   onChangeField = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
@@ -19,6 +25,7 @@ class UserForm extends Component {
 
   render() {
     const { onSubmitForm, onPressClose, edit } = this.props;
+    const { name, email, website } = this.state;
     return (
       <form className="form-container" onSubmit={onSubmitForm}>
         <button type="button" className="close-btn" onClick={onPressClose}>
@@ -30,6 +37,7 @@ class UserForm extends Component {
           onChange={this.onChangeField}
           required={true}
           type={"text"}
+          value={name}
         />
         <FormField
           name={"email"}
@@ -37,6 +45,7 @@ class UserForm extends Component {
           onChange={this.onChangeField}
           required={true}
           type={"email"}
+          value={email}
         />
         <FormField
           name={"website"}
@@ -44,6 +53,7 @@ class UserForm extends Component {
           onChange={this.onChangeField}
           required={true}
           type={"url"}
+          value={website}
         />
         <button type="submit" onClick={this.submitForm}>
           {edit ? "Update" : "Add"}
