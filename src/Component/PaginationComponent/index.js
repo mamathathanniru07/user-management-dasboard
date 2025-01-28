@@ -6,6 +6,7 @@ const Pagination = ({ pages, current, onClickPrev, onClickNext, goToPage }) => {
       <button
         className={"arrow-button " + (current === 0 ? "disable" : "")}
         onClick={onClickPrev}
+        disabled={current === 0}
       >
         {"<"}
       </button>
@@ -24,6 +25,7 @@ const Pagination = ({ pages, current, onClickPrev, onClickNext, goToPage }) => {
           "arrow-button " + (current === pages.length - 1 ? "disable" : "")
         }
         onClick={onClickNext}
+        disabled={current === pages.length - 1}
       >
         {">"}
       </button>
