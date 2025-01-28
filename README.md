@@ -22,10 +22,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-
 ## Folder Structure
+
 ###
-  ###  src
+
+### src
+
      | Components
         | UserDashBoard   (all the user list will appear here with pagination enabled)
             | index.js
@@ -42,17 +44,22 @@ You may also see any lint errors in the console.
     | Services
         | ApiConstants.js (constants like success codes api url paths defines here and used throught out app)
         | ApiUtils.js (Api requests will written here)
-        
+
     App.js  (main component to render the jsx from here)
 
+## Difficulties faced
 
+not much difficulties faced
 
+## Improvements you would make if given more time
 
-
+can implement Search based on username/email,\
+ alert/toast messages,\
+ it looks great for ui if we implement loader while making api calls,\
+ instead of pagination tabs it's looks cool implementing infinite scrolling
 
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-
